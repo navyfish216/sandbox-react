@@ -1,4 +1,4 @@
-import UserRow from "./UserRow"
+import UserRow from "./UserRow";
 
 function UserTable(props) {
   // テーブル全体のスタイル
@@ -41,7 +41,6 @@ function UserTable(props) {
         ))}
       </tbody>
     </table>
-  )
+  );
 }
-
 export default UserTable

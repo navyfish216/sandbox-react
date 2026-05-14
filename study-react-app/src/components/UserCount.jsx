@@ -13,6 +13,6 @@ function UserCount(props) {
     <div style={style}>
       ユーザー数：{count}人
     </div>
-  )
+  );
 }
 export default UserCount

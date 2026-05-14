@@ -17,6 +17,6 @@ function UserRow(props) {
       <td style={cellStyle}>{props.name}</td>
       <td style={cellStyle}>{props.age}</td>
     </tr>
-  )
+  );
 }
 export default UserRow
