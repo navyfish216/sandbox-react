@@ -1,5 +1,5 @@
-import UserTable from "../components/UserTable"
-import UserCount from "../components/UserCount"
+import UserTable from "../components/UserTable";
+import UserCount from "../components/UserCount";
 
 function UserList() {
   // 全体の枠や背景のスタイル
@@ -33,6 +33,6 @@ function UserList() {
       <UserTable users={users} />
       <UserCount userCount={users.length}/>
     </div>
-  )
+  );
 }
 export default UserList
