@@ -1,6 +1,6 @@
-function UserCount() {
-  // ユーザー数（仮の値）
-  const count = 3;
+function UserCount(props) {
+  // ユーザー数
+  const count = props.userCount;
 
   // 最低限のスタイル
   const style = {

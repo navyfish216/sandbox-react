@@ -1,8 +1,8 @@
-function UserRow() {
+function UserRow(props) {
   // 仮のデータ（1人分）
-  const id = 1;
-  const name = "山田太郎";
-  const age = 33;
+  //const id = 1;
+  //const name = "山田太郎";
+  //const age = 33;
 
   // スタイルをJSオブジェクトで宣言
   const cellStyle = {
@@ -13,9 +13,9 @@ function UserRow() {
 
   return (
     <tr>
-      <td style={cellStyle}>{id}</td>
-      <td style={cellStyle}>{name}</td>
-      <td style={cellStyle}>{age}</td>
+      <td style={cellStyle}>{props.id}</td>
+      <td style={cellStyle}>{props.name}</td>
+      <td style={cellStyle}>{props.age}</td>
     </tr>
   )
 }

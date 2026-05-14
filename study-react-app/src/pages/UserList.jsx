@@ -19,11 +19,19 @@ function UserList() {
     marginBottom: "20px"
   };
 
+  // ユーザーデータの配列
+  const users = [
+    { id: 1, name: "山田太郎", age: 33 },
+    { id: 2, name: "佐藤花子", age: 28 },
+    { id: 3, name: "南原一平", age: 52 },
+    { id: 4, name: "徳川家康", age: 45 }
+  ]
+
   return (
     <div style={containerStyle}>
       <div style={titleStyle}>ユーザー一覧</div>
-      <UserTable />
-      <UserCount />
+      <UserTable users={users} />
+      <UserCount userCount={users.length}/>
     </div>
   )
 }

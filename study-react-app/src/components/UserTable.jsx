@@ -1,6 +1,6 @@
 import UserRow from "./UserRow"
 
-function UserTable() {
+function UserTable(props) {
   // テーブル全体のスタイル
   const tableStyle = {
     borderCollapse: "collapse",
@@ -15,6 +15,12 @@ function UserTable() {
     background: "#c8e6c9"
   };
   
+  // ユーザーデータの配列
+  //const users = [
+  //  { id: 1, name: "山田太郎", age: 33 },
+  //  { id: 2, name: "佐藤花子", age: 28 }
+  //]
+
   return (
     <table style={tableStyle}>
       <thead>
@@ -25,9 +31,14 @@ function UserTable() {
         </tr>
       </thead>
       <tbody>
-        <UserRow />
-        <UserRow />
-        <UserRow />
+        {props.users.map((user) => (
+          <UserRow
+            key={user.id}
+            id={user.id}
+            name={user.name}
+            age={user.age}
+          />
+        ))}
       </tbody>
     </table>
   )
