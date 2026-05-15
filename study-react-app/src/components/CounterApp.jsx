@@ -1,12 +1,13 @@
 import { useState } from 'react';
 
-function CounterApp() {
+function CounterApp({count, onIncrement}) {
   // ①useStateを使ってカウントのステートを定義
-  const [count, setCount] = useState(1);
+  //const [count, setCount] = useState(1);
 
   const handleClick = () => {
     // ②ボタンがクリックされたときにカウントを1増やす
-    setCount(count + 1);
+    //setCount(count + 1);
+    onIncrement();
   };
 
   return (
