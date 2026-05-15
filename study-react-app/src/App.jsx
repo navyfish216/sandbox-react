@@ -7,13 +7,19 @@ import UserList from "./pages/UserList";
 import CounterApp from "./components/CounterApp";
 import TextInputSample from "./components/TextInputSample";
 import ToggleSwitch from "./components/ToggleSwitch";
+import FormApp from "./components/EventSample/FormApp";
+import HoverHint from "./components/EventSample/HoverHint";
+import FocusInput from "./components/EventSample/FocusInput";
 import './App.css';
 
 function App() {
   return (
     <>
-      <TotalDisplay />
+      <FormApp />
       {/*
+      <FocusInput />
+      <HoverHint />
+      <TotalDisplay />
       <ToggleSwitch />
       <TextInputSample />
       <CounterApp />
