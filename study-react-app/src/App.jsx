@@ -10,13 +10,20 @@ import ToggleSwitch from "./components/ToggleSwitch";
 import FormApp from "./components/EventSample/FormApp";
 import HoverHint from "./components/EventSample/HoverHint";
 import FocusInput from "./components/EventSample/FocusInput";
+import EveryRender from "./components/EffectSample/EveryRender";
+import FirstTimeOnly from "./components/EffectSample/FirstTimeOnly";
+import NameWatcher from "./components/EffectSample/NameWatcher";
 import './App.css';
 
 function App() {
   return (
     <>
-      <FormApp />
+      <NameWatcher />
       {/*
+      <FirstTimeOnly />
+      <EveryRender />
+
+      <FormApp />
       <FocusInput />
       <HoverHint />
       <TotalDisplay />
