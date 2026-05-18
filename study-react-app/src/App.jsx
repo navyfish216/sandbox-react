@@ -21,13 +21,15 @@ import TimerComponent from "./components/EffectSample/TimerComponent";
 import ToggleTimer from "./pages/EffectSample/ToggleTimer";
 // 6章：コンテキストの理解
 import PropsDrillingView from "./pages/PropsDrillingSample/PropsDrillingView";
+import UserContextView from "./pages/ContextSample/UserContextView";
 import './App.css';
 
 function App() {
   return (
     <>
-      <PropsDrillingView />
+      <UserContextView />
       {/*
+      <PropsDrillingView />
 
       <ToggleTimer />
       <NameWatcher />
