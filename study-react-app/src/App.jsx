@@ -19,13 +19,17 @@ import FirstTimeOnly from "./components/EffectSample/FirstTimeOnly";
 import NameWatcher from "./components/EffectSample/NameWatcher";
 import TimerComponent from "./components/EffectSample/TimerComponent";
 import ToggleTimer from "./pages/EffectSample/ToggleTimer";
+// 6章：コンテキストの理解
+import PropsDrillingView from "./pages/PropsDrillingSample/PropsDrillingView";
 import './App.css';
 
 function App() {
   return (
     <>
-      <ToggleTimer />
+      <PropsDrillingView />
       {/*
+
+      <ToggleTimer />
       <NameWatcher />
       <FirstTimeOnly />
       <EveryRender />
