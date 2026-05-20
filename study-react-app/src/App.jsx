@@ -22,13 +22,16 @@ import ToggleTimer from "./pages/EffectSample/ToggleTimer";
 // 6章：コンテキストの理解
 import PropsDrillingView from "./pages/PropsDrillingSample/PropsDrillingView";
 import UserContextView from "./pages/ContextSample/UserContextView";
+// 7章：React Routerによるページ遷移
+import RouterView from "./pages/RouterSample/RouterView";
 import './App.css';
 
 function App() {
   return (
     <>
-      <UserContextView />
+      <RouterView />
       {/*
+      <UserContextView />
       <PropsDrillingView />
 
       <ToggleTimer />
