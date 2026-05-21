@@ -3,6 +3,7 @@ import Home from "../../components/RouterSample/Home";
 import About from "../../components/RouterSample/About";
 import Contact from "../../components/RouterSample/Contact";
 import Header from "../../components/RouterSample/Header";
+import NotFound from "../../components/RouterSample/NotFound";
 
 function RouterView () {
   return (
@@ -14,6 +15,8 @@ function RouterView () {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        {/* 存在しないURLをすべてキャッチ */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

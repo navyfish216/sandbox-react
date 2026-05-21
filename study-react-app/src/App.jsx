@@ -32,13 +32,13 @@ import './App.css';
 function App() {
   return (
     <>
+      <RouterView />
       <DashboardView />
 
       {/*
 
       <UseParamsMulti />
       <UseParamsSample />
-      <RouterView />
       <UserContextView />
       <PropsDrillingView />
 
