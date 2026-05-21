@@ -1,0 +1,20 @@
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Dashboard from "../../components/RouterSample/Dashboard";
+import Profile from "../../components/RouterSample/Profile";
+import Settings from "../../components/RouterSample/Settings";
+
+function DashboardView() {
+    return (
+      <BrowserRouter>
+        <Routes>
+          {/* 親 */}
+          <Route path="dashboard" element={<Dashboard />}>
+            {/* 子 */}
+            <Route path="profile" element={<Profile />} />
+            <Route path="settings" element={<Settings />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    );
+}
+export default DashboardView;

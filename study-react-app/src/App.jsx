@@ -26,13 +26,17 @@ import UserContextView from "./pages/ContextSample/UserContextView";
 import RouterView from "./pages/RouterSample/RouterView";
 import UseParamsSample from "./pages/RouterSample/UseParamsSample";
 import UseParamsMulti from "./pages/RouterSample/UseParamsMulti";
+import DashboardView from "./pages/RouterSample/DashboardView";
 import './App.css';
 
 function App() {
   return (
     <>
-      <UseParamsMulti />
+      <DashboardView />
+
       {/*
+
+      <UseParamsMulti />
       <UseParamsSample />
       <RouterView />
       <UserContextView />
