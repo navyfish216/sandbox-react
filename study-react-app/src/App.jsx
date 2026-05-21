@@ -24,13 +24,17 @@ import PropsDrillingView from "./pages/PropsDrillingSample/PropsDrillingView";
 import UserContextView from "./pages/ContextSample/UserContextView";
 // 7章：React Routerによるページ遷移
 import RouterView from "./pages/RouterSample/RouterView";
+import UseParamsSample from "./pages/RouterSample/UseParamsSample";
+import UseParamsMulti from "./pages/RouterSample/UseParamsMulti";
 import './App.css';
 
 function App() {
   return (
     <>
-      <RouterView />
+      <UseParamsMulti />
       {/*
+      <UseParamsSample />
+      <RouterView />
       <UserContextView />
       <PropsDrillingView />
 

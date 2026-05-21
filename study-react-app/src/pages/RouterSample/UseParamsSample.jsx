@@ -1,0 +1,18 @@
+import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
+import UserDetail from "../../components/RouterSample/UserDetail";
+
+function UserParamsSample () {
+  return (
+    <BrowserRouter>
+      <h1>React Routerの例</h1>
+      <Link to="/user/1">🚹ユーザーID： 1</Link><br />
+      <Link to="/user/2">🚺ユーザーID： 2</Link><br />
+      <Link to="/user/3">🚹ユーザーID： 3</Link><br />
+      <hr />
+      <Routes>
+        <Route path="/user/:id" element={<UserDetail />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+export default UserParamsSample;
