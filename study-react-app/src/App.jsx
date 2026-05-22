@@ -29,14 +29,17 @@ import UseParamsMulti from "./pages/RouterSample/UseParamsMulti";
 import DashboardView from "./pages/RouterSample/DashboardView";
 // 8章：フォームと入力値の管理
 import ValidationForm from "./components/ValidationSample/ValidationForm";
+import ReactHookFormSample from "./components/ValidationSample/ReactHookFormSample";
 import './App.css';
 
 function App() {
   return (
     <>
-      <ValidationForm />
+      <ReactHookFormSample />
 
       {/*
+      <ValidationForm />
+
       <RouterView />
       <DashboardView />
       <UseParamsMulti />
