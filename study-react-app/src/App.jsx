@@ -27,16 +27,18 @@ import RouterView from "./pages/RouterSample/RouterView";
 import UseParamsSample from "./pages/RouterSample/UseParamsSample";
 import UseParamsMulti from "./pages/RouterSample/UseParamsMulti";
 import DashboardView from "./pages/RouterSample/DashboardView";
+// 8章：フォームと入力値の管理
+import ValidationForm from "./components/ValidationSample/ValidationForm";
 import './App.css';
 
 function App() {
   return (
     <>
-      <RouterView />
-      <DashboardView />
+      <ValidationForm />
 
       {/*
-
+      <RouterView />
+      <DashboardView />
       <UseParamsMulti />
       <UseParamsSample />
       <UserContextView />
