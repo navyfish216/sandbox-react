@@ -30,14 +30,17 @@ import DashboardView from "./pages/RouterSample/DashboardView";
 // 8章：フォームと入力値の管理
 import ValidationForm from "./components/ValidationSample/ValidationForm";
 import ReactHookFormSample from "./components/ValidationSample/ReactHookFormSample";
+// 9章：非同期処理とAPI
+import RandomImageApp from "./components/APISample/RandomImageApp";
 import './App.css';
 
 function App() {
   return (
     <>
-      <ReactHookFormSample />
+      <RandomImageApp />
 
       {/*
+      <ReactHookFormSample />
       <ValidationForm />
 
       <RouterView />
