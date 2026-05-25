@@ -40,10 +40,12 @@ import './App.css';
 function App() {
   return (
     <>
+      <RandomImageApp />
+      
+      {/*
       <ButtonExamplePage />
       <TextFieldExample />
 
-      {/*
       <RandomImageApp />
       <ReactHookFormSample />
       <ValidationForm />

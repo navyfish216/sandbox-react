@@ -1,7 +1,7 @@
 import {useState} from "react";
 
-//const API = "https://dog.ceo/api/breeds/image/random";
-const API = "https://api.thecatapi.com/v1/images/search";
+//const API_ENDPOINT = "https://dog.ceo/api/breeds/image/random";
+const API_ENDPOINT = "https://api.thecatapi.com/v1/images/search";
 
 export default function RandomImageApp() {
   // 画面に表示したい情報（状態）
@@ -11,14 +11,14 @@ export default function RandomImageApp() {
 
   // 画像を取得する関数
   // async: 「この中でawaitを使うよ」
-  const fetchDog = async () => {
+  const fetchImage = async () => {
     // 初期状態
     setLoading(true); // 読み込み中
     setError(""); //エラーはない
 
     try {
       // サーバーへ取りに行く（Promiseが買える）
-      const res = await fetch(API);
+      const res = await fetch(API_ENDPOINT);
 
       // データ取得判定
       if (!res.ok) {
@@ -46,8 +46,8 @@ export default function RandomImageApp() {
     <div style={{maxWidth: 480, margin: "2rem auto", textAlign: "center"}}>
       <h2>ランダム猫画像</h2>
 
-      {/* ボタン押下でfetchDogを実行。読み込み中は押せない */}
-      <button onClick={fetchDog} disabled={loading} style={{padding: "8px 16px"}}>
+      {/* ボタン押下でfetchImageを実行。読み込み中は押せない */}
+      <button onClick={fetchImage} disabled={loading} style={{padding: "8px 16px"}}>
         {loading ? "取得中..." : "画像を取得"}
       </button>
 
@@ -57,7 +57,7 @@ export default function RandomImageApp() {
       {/* 画像URLが入ったら表示 */}
       {imageUrl && (
         <div style={{marginTop: "1rem"}}>
-          <img src={imageUrl} alt="random dog" style={{width: "300px", borderRadius: 8}} />
+          <img src={imageUrl} alt="random image" style={{width: "300px", borderRadius: 8}} />
         </div>
       )}
     </div>
