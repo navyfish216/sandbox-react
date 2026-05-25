@@ -32,14 +32,17 @@ import ValidationForm from "./components/ValidationSample/ValidationForm";
 import ReactHookFormSample from "./components/ValidationSample/ReactHookFormSample";
 // 9章：非同期処理とAPI
 import RandomImageApp from "./components/APISample/RandomImageApp";
+// 10章：MUI
+import ButtonExamplePage from "./pages/MUISample/ButtonExamplePage";
 import './App.css';
 
 function App() {
   return (
     <>
-      <RandomImageApp />
+      <ButtonExamplePage />
 
       {/*
+      <RandomImageApp />
       <ReactHookFormSample />
       <ValidationForm />
 
