@@ -17,7 +17,7 @@ export default function RandomImageApp() {
     setError(""); //エラーはない
 
     try {
-      // サーバーへ取りに行く（Promiseが買える）
+      // サーバーへ取りに行く（Promiseが返る）
       const res = await fetch(API_ENDPOINT);
 
       // データ取得判定

@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "太郎",
+      "email": "taro@example.com"
+    },
+    {
+      "id": "2",
+      "name": "花子",
+      "email": "hanako@example.com"
+    },
+    {
+      "name": "さし",
+      "email": "sashi@jp",
+      "id": "ErgDFNZ2qI8"
+    },
+    {
+      "name": "たちつてと",
+      "email": "tachi@uk",
+      "id": "75NY24fczEk"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "はじめての投稿",
+      "body": "こんにちは！"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

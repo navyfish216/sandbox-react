@@ -35,12 +35,14 @@ import RandomImageApp from "./components/APISample/RandomImageApp";
 // 10章：MUI
 import ButtonExamplePage from "./pages/MUISample/ButtonExamplePage";
 import TextFieldExample from "./components/MUISample/TextFieldExample";
+// 11章：API通信（fetchを使用）
+import FetchExample from "./components/APISample/FetchExample";
 import './App.css';
 
 function App() {
   return (
     <>
-      <RandomImageApp />
+      <FetchExample />
       
       {/*
       <ButtonExamplePage />
