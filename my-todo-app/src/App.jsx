@@ -1,27 +1,60 @@
 import {BrowserRouter} from 'react-router-dom';
 import AppLayout from "./components/layout/AppLayout";
-import TodoForm from './components/todos/TodoForm';
+import TodoList from './components/todos/TodoList';
 import './App.css'
 
+// テスト用のダミーデータ
+const testTodos = [
+  {
+    id: "t1",
+    title: "買い物に行く",
+    detail: "牛乳とパンを買う",
+    priority: "medium",
+    dueDate: "2024-12-31",
+    completed: false
+  },
+  {
+    id: "t2",
+    title: "プレゼンの準備",
+    detail: "来週の会議用の資料を作成する",
+    priority: "high",
+    dueDate: "2024-12-25",
+    completed: true
+  },
+  {
+    id: "t3",
+    title: "本を読む",
+    detail: "",
+    priority: "low",
+    dueDate: "",
+    completed: false
+  }
+];
+
 function App() {
-  const handleSubmit = (values) => {
-    console.log("送信されたデータ：", values);
-    alert("フォームが送信されました！コンソールを確認してください。")
-  };
+  const handleToggle = (id) => {
+    console.log("完了状態を切り替え：", id);
+  }
+
+  const handleDelete = (id) => {
+    console.log("削除：", id);
+  }
 
   return (
     <BrowserRouter>
       <AppLayout>
-        <h2>TodoFormのテスト</h2>
-        <TodoForm
-          initialValues={{
-            title: "",
-            detail: "",
-            priority: "medium",
-            dueDate: ""
-          }}
-          onSubmit={handleSubmit}
-          submitText="テスト送信"
+        <h2>TodoListのテスト</h2>
+        <TodoList
+          todos={testTodos}
+          onToggle={handleToggle}
+          onDelete={handleDelete}
+        />
+        <hr />
+        <h3>空のリストのテスト</h3>
+        <TodoList
+          todos={[]}
+          onToggle={handleToggle}
+          onDelete={handleDelete}
         />
       </AppLayout>
     </BrowserRouter>
