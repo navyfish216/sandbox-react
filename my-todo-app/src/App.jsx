@@ -1,26 +1,31 @@
-import { validateTodo } from "./utils/validate";
+import {BrowserRouter} from 'react-router-dom';
+import AppLayout from "./components/layout/AppLayout";
+import TodoForm from './components/todos/TodoForm';
 import './App.css'
 
 function App() {
-  // テスト用の入力データ
-  const testInput = {
-    title: "", // 空なのでエラーになる
-    detail: "あ".repeat(60), // 60文字→エラーになる
-    dueDate: "2020-01-01", // 過去日→エラーになる
-    priority: "none", // 不正な値→エラーになる
+  const handleSubmit = (values) => {
+    console.log("送信されたデータ：", values);
+    alert("フォームが送信されました！コンソールを確認してください。")
   };
 
-  // validateTodoを呼び出して結果を確認
-  const errors = validateTodo(testInput);
-
-  console.log(errors); // ブラウザのコンソールに表示
-
   return (
-    <>
-      <h1>validateTodoのテスト</h1>
-      <h4>{JSON.stringify(errors, null, 2)}</h4>
-    </>
-  )
+    <BrowserRouter>
+      <AppLayout>
+        <h2>TodoFormのテスト</h2>
+        <TodoForm
+          initialValues={{
+            title: "",
+            detail: "",
+            priority: "medium",
+            dueDate: ""
+          }}
+          onSubmit={handleSubmit}
+          submitText="テスト送信"
+        />
+      </AppLayout>
+    </BrowserRouter>
+  );
 }
 
 export default App
