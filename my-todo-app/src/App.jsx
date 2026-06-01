@@ -1,63 +1,40 @@
-import {BrowserRouter} from 'react-router-dom';
-import AppLayout from "./components/layout/AppLayout";
-import TodoList from './components/todos/TodoList';
+import {useState} from "react";
+import ConfirmDialog from "./components/common/ConfirmDialog";
 import './App.css'
 
-// テスト用のダミーデータ
-const testTodos = [
-  {
-    id: "t1",
-    title: "買い物に行く",
-    detail: "牛乳とパンを買う",
-    priority: "medium",
-    dueDate: "2024-12-31",
-    completed: false
-  },
-  {
-    id: "t2",
-    title: "プレゼンの準備",
-    detail: "来週の会議用の資料を作成する",
-    priority: "high",
-    dueDate: "2024-12-25",
-    completed: true
-  },
-  {
-    id: "t3",
-    title: "本を読む",
-    detail: "",
-    priority: "low",
-    dueDate: "",
-    completed: false
-  }
-];
-
 function App() {
-  const handleToggle = (id) => {
-    console.log("完了状態を切り替え：", id);
+  // ダイアログの開閉を管理
+  const [open, setOpen] = useState(false);
+
+  // 「削除ボタン」を押したときにダイアログを開く
+  const handleOpen = () => setOpen(true);
+
+  // 「削除」ボタンが押されたときの処理
+  const handleConfirm = () => {
+    alert("削除しました！");
+    setOpen(false);
   }
 
-  const handleDelete = (id) => {
-    console.log("削除：", id);
+  // 「キャンセル」ボタンが押されたときの処理
+  const handleCancel = () => {
+    alert("キャンセルしました。");
+    setOpen(false);
   }
 
   return (
-    <BrowserRouter>
-      <AppLayout>
-        <h2>TodoListのテスト</h2>
-        <TodoList
-          todos={testTodos}
-          onToggle={handleToggle}
-          onDelete={handleDelete}
-        />
-        <hr />
-        <h3>空のリストのテスト</h3>
-        <TodoList
-          todos={[]}
-          onToggle={handleToggle}
-          onDelete={handleDelete}
-        />
-      </AppLayout>
-    </BrowserRouter>
+    <div style={{textAlign: "center"}}>
+      <h2>ConfirmDialog動作確認</h2>
+      <button onClick={handleOpen}>削除ダイアログを開く</button>
+
+      {/* ダイアログ呼び出し */}
+      <ConfirmDialog 
+        open={open} 
+        title="削除の確認"
+        message="このデータを削除してもよろしいですか？"
+        onConfirm={handleConfirm}
+        onCancel={handleCancel}
+      />
+    </div>
   );
 }
 
