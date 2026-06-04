@@ -43,7 +43,7 @@ export default function TodoItem({todo, onToggle, onDelete}) {
 
       <div className="todo-actions">
         <Link
-          todo={`/todos/${todo.id}/edit`}
+          to={`/todos/${todo.id}/edit`}
           className="action-btn edit-btn"
           title="編集"
         >

@@ -1,40 +1,25 @@
-import {useState} from "react";
-import ConfirmDialog from "./components/common/ConfirmDialog";
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
+import {TodoProvider} from './context/TodoContext';
+import AppLayout from "./components/layout/AppLayout";
+import TodosPage from "./pages/TodosPage";
+import TodoNewPage from './pages/TodoNewPage';
+import TodoEditPage from './pages/TodoEditPage';
 import './App.css'
 
 function App() {
-  // ダイアログの開閉を管理
-  const [open, setOpen] = useState(false);
-
-  // 「削除ボタン」を押したときにダイアログを開く
-  const handleOpen = () => setOpen(true);
-
-  // 「削除」ボタンが押されたときの処理
-  const handleConfirm = () => {
-    alert("削除しました！");
-    setOpen(false);
-  }
-
-  // 「キャンセル」ボタンが押されたときの処理
-  const handleCancel = () => {
-    alert("キャンセルしました。");
-    setOpen(false);
-  }
-
   return (
-    <div style={{textAlign: "center"}}>
-      <h2>ConfirmDialog動作確認</h2>
-      <button onClick={handleOpen}>削除ダイアログを開く</button>
-
-      {/* ダイアログ呼び出し */}
-      <ConfirmDialog 
-        open={open} 
-        title="削除の確認"
-        message="このデータを削除してもよろしいですか？"
-        onConfirm={handleConfirm}
-        onCancel={handleCancel}
-      />
-    </div>
+    <TodoProvider>
+      <BrowserRouter>
+        <AppLayout>
+          <Routes>
+            <Route path="/" element={<Navigate to="/todos" replace />} />
+            <Route path="/todos" element={<TodosPage />} />
+            <Route path="/todos/new" element={<TodoNewPage />} />
+            <Route path="/todos/:id/edit" element={<TodoEditPage />} />
+          </Routes>
+        </AppLayout>
+      </BrowserRouter>
+    </TodoProvider>
   );
 }
 

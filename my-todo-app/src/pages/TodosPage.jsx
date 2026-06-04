@@ -3,9 +3,9 @@ import {useLocation} from "react-router-dom";
 import {useTodos} from "../context/TodoContext";
 import TodoList from "../components/todos/TodoList";
 import ConfirmDialog from "../components/common/ConfirmDialog";
-import "./TodoPage.css";
+import "./TodosPage.css";
 
-export default function TodoPage () {
+export default function TodosPage () {
   // TodoContextから必要な機能を取得（todos配列、完了状態の切り替え、削除機能）
   const {todos, toggleComplete, removeTodo} = useTodos();
   // 削除対象のTodoを保存する状態（nullなら削除ダイアログは表示されない）
@@ -32,7 +32,7 @@ export default function TodoPage () {
     // successMessageが設定されている場合のみ実行
     if (successMessage) {
       // ３秒後にメッセージを消すタイマーを設定
-      const timer = setTimer(() => {
+      const timer = setTimeout(() => {
         setSuccessMessage("");
       }, 3000);
       // コンポーネントがアンマウントされた時や

@@ -45,7 +45,7 @@ export function TodoProvider({children}) {
 
   // 削除（idが一致するものだけ除外）
   function removeTodo(id) {
-    setTodos((prev) => prev.filter((t) => (id.id === id ? false : true)));
+    setTodos((prev) => prev.filter((t) => (t.id === id ? false : true)));
   }
 
   // 完了フラグの反転

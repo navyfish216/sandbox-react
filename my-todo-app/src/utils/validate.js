@@ -8,7 +8,7 @@ export function validateTodo(input) {
   }
 
   // タイトルが10文字を超える場合エラー
-  if (!input.title && input.title.length > 10) {
+  if (input.title && input.title.length > 10) {
     errors.title = "タイトルは10文字まで";
   }
 
