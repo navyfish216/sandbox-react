@@ -12,12 +12,12 @@ export default function TodosPage () {
   const [deleteTarget, setDeleteTarget] = useState(null);
   // 成功メッセージを表示するための状態
   const [successMessage, setSuccessMessage] = useState("");
-  // 現在のページの場所情報を取得（他のページからの繊維時の情報を受け取るため）
+  // 現在のページの場所情報を取得（他のページからの遷移時の情報を受け取るため）
   const location = useLocation();
 
   // ナビゲーション時のstateから成功メッセージを取得
   useEffect(() => {
-    // 他のページから繊維してきた時にメッセージが設定されているかチェック
+    // 他のページから遷移してきた時にメッセージが設定されているかチェック
     if (location.state?.message) {
       setSuccessMessage(location.state.message);
 
